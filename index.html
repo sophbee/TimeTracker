@@ -9,8 +9,103 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
-
 </head>
-<body>
+
+<body class="container">
+
+	<div class="jumbotron">
+	  <h1 class="display-4">Hello, world!</h1>
+	</div>
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">BLAH</div>
+		<div class="panel-body">
+		<table class="table table-dark">
+			
+			 <thead>
+			   <tr>
+			     <th scope="col">#</th>
+			     <th scope="col">First</th>
+			     <th scope="col">Last</th>
+			     <th scope="col">Handle</th>
+			   </tr>
+			 </thead>
+				 <tbody>
+				   <tr>
+				     <th scope="row">1</th>
+				     <td>Mark</td>
+				     <td>Otto</td>
+				     <td>@mdo</td>
+				   </tr>
+				   <tr>
+				     <th scope="row">2</th>
+				     <td>Jacob</td>
+				     <td>Thornton</td>
+				     <td>@fat</td>
+				   </tr>
+				   <tr>
+				     <th scope="row">3</th>
+				     <td>Larry</td>
+				     <td>the Bird</td>
+				     <td>@twitter</td>
+				   </tr>
+				 </tbody>
+			</table>
+		</div>
+	</div>
+
+	<form class="form-horizontal">
+	<fieldset>
+
+	<!-- Form Name -->
+	<legend>Add Name</legend>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="Name">Name</label>  
+	  <div class="col-md-4">
+	  <input id="Name" name="Name" type="text" placeholder="" class="form-control input-md">
+	    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="Role">Role</label>  
+	  <div class="col-md-4">
+	  <input id="Role" name="Role" type="text" placeholder="" class="form-control input-md">
+	    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="StartDate">Start Date (DD/MM/YY - ex: 01/01/89)</label>  
+	  <div class="col-md-4">
+	  <input id="StartDate" name="StartDate" type="text" placeholder="" class="form-control input-md">
+	    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="MonthlyRate">Monthly Rate</label>  
+	  <div class="col-md-4">
+	  <input id="MonthlyRate" name="MonthlyRate" type="text" placeholder="" class="form-control input-md">
+	    
+	  </div>
+	  <button type="button" class="btn btn-primary" id="add-user">Submit</button>
+	</div>
+
+	</fieldset>
+	</form>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="logic.js"></script>
+</div>
 </body>
 </html>
