@@ -10,7 +10,7 @@
   firebase.initializeApp(config);
 
   $(document).on("click", "button", function() {
-  	console.log("Hello world")
+  	
   });
 
   var database = firebase.database();
@@ -36,3 +36,27 @@ $("#add-user").on("click", function(event) {
 		dateAdded: firebase.database.ServerValue.TIMESTAMP
 	});
 });
+var row = null;
+
+database.ref().on("child_added", function(childSnapshot) {
+	console.log(childSnapshot.val().name);
+	console.log(childSnapshot.val().role);
+	console.log(childSnapshot.val().startDate);
+	console.log(childSnapshot.val().monthlyRate);
+
+	row = {
+		name: childSnapshot.val().name,
+		role: childSnapshot.val().role,
+		startDate: childSnapshot.val().startDate,
+		monthlyRate: childSnapshot.val().monthlyRate
+	};
+
+	$("tbody").append("<tr><td>" + row.name + "</td> <td>" + row.role + "</td> <td>" + row.startDate + "</td> <td>" + row.monthlyRate + "</td> </tr>");
+
+
+});
+
+
+
+
+
